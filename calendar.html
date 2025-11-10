@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href=".\calendar.css">
+</head>
+<body>
+    <nav>
+        <h1 id='current'></h1>
+        <form name ="monthForm">
+        <input type="button" value="前月" onclick="prev()">
+        <input type="month" id="setMonth">
+        <input type="button" value="次月" onclick="next()">
+        </form>
+    </nav>
+    <main>
+        <div id="table-placeholder"><p>Loading...</p></div>
+    </main>
+</body>
+<script src="./js/next.js" defer></script>
+<script src="./js/button.js" defer></script>
+<script src="./js/var.js" defer></script>
+<script src="./js/table.js" defer></script>
+<script src="./js/start.js" defer></script>
+<script src="./js/main.js" defer></script>
+<script src="./js/submit.js" defer></script>
+</html>
