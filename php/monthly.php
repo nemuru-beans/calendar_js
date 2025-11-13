@@ -1,5 +1,14 @@
 <?php
 
+//URL直打ちで遷移できないようにします
+$allowed_hosts = array('localhost', '127.0.0.1');
+$referrer = parse_url($_SERVER['HTTP_REFERER'] ?? '', PHP_URL_HOST);
+
+if (!in_array($referrer, $allowed_hosts)) {
+    header('HTTP/1.1 403 Forbidden');
+    die('Direct access is not allowed.');
+}
+
 //月ごとのテーブルを(存在しなければ作成し、)Jsonとして返します
 
 $post = $_POST['tableName']; //2025-11のような形式です
